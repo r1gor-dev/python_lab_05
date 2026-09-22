@@ -27,5 +27,8 @@ class Vehicle:
     def stop(self):
         self._speed = 0
     
+    def __str__(self):
+        return f"{self.brand} {self.model} ({self.year}) года."
+    
     def get_info(self):
         return f"{self.brand} {self.model} ({self.year}) года."
