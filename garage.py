@@ -15,7 +15,7 @@ class Garage:
             print(x.get_info())
 
     def find_by_brand(self,brand):
-        print("\nПоиск '{brand}'...")
+        print(f"\nПоиск '{brand}'...")
         for x in self.vehicles:
             if x.brand.lower() == brand.lower():
                 print(x.get_info())

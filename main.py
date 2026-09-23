@@ -2,17 +2,20 @@
 from models.car import Car
 from models.truck import Truck
 from models.motorcycle import Motorcycle
+from models.electric_car import ElectricCar
 from garage import Garage
 
 def main():
     car = Car("Lada", "Priora", 2000, 4)
     truck = Truck("MAN", "CO", 2019, 20)
     motik = Motorcycle("Yamaha", "R1", 2021, False)
+    tesla = ElectricCar("Tesla", "Model X", 2023, 100, True)
 
     mygarage = Garage()
     mygarage.add_vehicle(car)
     mygarage.add_vehicle(truck)
     mygarage.add_vehicle(motik)
+    mygarage.add_vehicle(tesla)
 
     mygarage.show_all()
     mygarage.find_by_brand("MAN")
