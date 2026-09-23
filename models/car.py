@@ -5,5 +5,8 @@ class Car(Vehicle):
         super().__init__(brand,model,year)
         self.doors=doors
 
+    def move(self):
+        print("По дороге едет машина", self.brand)
+
     def get_info(self):
         return f"{super().get_info()} Кол-во дверей: {self.doors}"

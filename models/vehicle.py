@@ -1,4 +1,6 @@
-class Vehicle:
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
     def __init__(self, brand, model, year):
         self.brand = brand
         self.model = model
@@ -9,6 +11,10 @@ class Vehicle:
     def speed(self):
         return self._speed
     
+    @abstractmethod
+    def move(self):
+        pass
+
     @speed.setter
     def speed(self, value):
         if value <0:
